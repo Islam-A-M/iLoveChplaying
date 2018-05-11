@@ -1,47 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/style"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="64dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texttw"
-        app:srcCompat="@drawable/k" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/i"
-        android:textAppearance="@android:style/TextAppearance.Material.Display3"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/Text3"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_margin="4dp"
+        android:padding="4dp"
+        android:text="Please read each question carefully and select the most accurate response."
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif-condensed"
+         />
 
-    <TextView
-        android:id="@+id/texttw"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="@string/love"
-        android:textAppearance="@android:style/TextAppearance.Material.Display3"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:orientation="vertical" >
 
-</android.support.constraint.ConstraintLayout>
+
+        <CheckedTextView
+            android:id="@+id/checkedTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkMark="Yes, No"
+            android:text="1. Does s/he join in playing games with other children easily?"
+            android:typeface="normal" />
+
+
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:clickable="true"
+            android:text="Yes"
+            android:textSize="10sp"
+            tools:text="Yes" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:clickable="true"
+            android:gravity="left"
+            android:text="No"
+            android:textSize="10sp" />
+
+        <CheckedTextView
+            android:id="@+id/checkedTextView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkMark="Yes, No"
+            android:text="2. Does s/he come up to you spontaneously for a chat?"
+            android:typeface="normal" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:clickable="true"
+            android:text="Yes"
+            android:textSize="10sp"
+            tools:text="Yes" />
+
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:clickable="true"
+            android:gravity="left"
+            android:text="No"
+            android:textSize="10sp" />
+
+</LinearLayout>
+</RelativeLayout>
